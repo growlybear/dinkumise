@@ -1,0 +1,24 @@
+{
+  "author": "Michael Allan",
+  "name": "dinkumise",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/growlybear/dinkumise.git"
+  },
+  "dependencies": {
+    "falafel": "~0.1.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.2.2",
+    "coffee-script": "~1.3.3"
+  },
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  },
+  "scripts": {
+     "prepublish": "coffee -o lib/ -c src/",
+     "test": "coffee -o lib/ -c test/ src/ && mocha lib/test.js -R spec"
+  }
+}
